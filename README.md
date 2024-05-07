@@ -1,7 +1,6 @@
-ECDSA Playground
-################
+# ECDSA Playground
 
-# About
+## About
 
 A collection of ECDSA implementations, typically found on resource-constrained devices such as smartcards.
 These implementations are intended to analyze, test and play with implementations, e.g. when reversing
@@ -10,7 +9,7 @@ black box implementations.
 These implementations are not ready for production use! In particular, they are not side channel resistant, although some
 feature implementation details that are intended to study side channel resistance.
 
-# Implementations
+## Implementations
 
 - `01_plain_double_add`: textbook ECC *double & add* implemented with *affine* coordinates. Plain ECDSA.
   
@@ -32,7 +31,7 @@ feature implementation details that are intended to study side channel resistanc
     Having several zeros improves performance, since fewer point additions are required. On the other hand,
     this again is per-se not sca-resistant, since we have different timings for zero/non-zero values.
 
-# PyTest
+## PyTest
 
 Some tests are implemented to make sure that the implementations generate valid ECDSA signatures. To run
 these tests, install `pytest`, open a commandline, change to the appropriate subdirectory and run `pytest`, e.g. 
@@ -42,7 +41,7 @@ cd ECC_01_plain_double_add
 pytest
 ````
   
-# Paper References
+## Paper References
 
 - [1] Victor Lomne and Thomas Roche: A Side Journey to Titan
 - [2] Jerome A.: Low-Weight Binary Representations for Pairs of Integers
