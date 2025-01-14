@@ -3,11 +3,11 @@
 ## About
 
 A collection of ECDSA implementations, typically found on resource-constrained devices such as smartcards.
-These implementations are intended to analyze, test and play with implementations, e.g. when reversing
+These implementations are intended to analyze, test and play with them, e.g. when reversing
 black box implementations.
 
-These implementations are not ready for production use! In particular, they are not side channel resistant, although some
-feature implementation details that are intended to study side channel resistance.
+These implementations are _not_ ready for production use! In particular, they are not side-channel resistant, although some
+feature implementation details that are intended to study side-channel resistance.
 
 ## Implementations
 
@@ -31,14 +31,20 @@ feature implementation details that are intended to study side channel resistanc
     Having several zeros improves performance, since fewer point additions are required. On the other hand,
     this again is per-se not sca-resistant, since we have different timings for zero/non-zero values.
 
+- `05_montgomery` : straight-forward montgomery implementation using montgomery multiplication; nor further
+   side-channel resistance
+
+- `05_babygiantstep` : A toy implementation to illustrate the baby-step giant step algorithm. Of course, 
+   this does not scale in python for nistp256, thus here we limit ourselves to 32 bit scalars.
+
 ## PyTest
 
 Some tests are implemented to make sure that the implementations generate valid ECDSA signatures. To run
-these tests, install `pytest`, open a commandline, change to the appropriate subdirectory and run `pytest`, e.g. 
+these tests, install `pytest`, open a commandline, change to the appropriate subdirectory and run `python -m pytest`, e.g. 
 
 ````
 cd ECC_01_plain_double_add
-pytest
+python -m pytest
 ````
   
 ## Paper References

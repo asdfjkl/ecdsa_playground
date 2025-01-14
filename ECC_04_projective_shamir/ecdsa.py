@@ -1,5 +1,5 @@
-from .curve_projective import Point
-from .naf import make_naf, extend_naf, undo_naf
+from curve_projective import Point
+from naf import make_naf, extend_naf, undo_naf
 
 ## ecdsa with base point blinding and double & add by using projective coordinates
 ##

@@ -111,6 +111,7 @@ class ECC:
             return (P == O_POINT_INF)
         return (P.x == Q.x and P.y == Q.y)
 
+
     def inv(self,P):
         """
         Inverse of the point P on the elliptic curve y^2 = x^3 + ax + b.

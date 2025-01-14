@@ -1,4 +1,4 @@
-from .curve_affine import Point, ECC, O_POINT_INF
+from curve_affine import Point, ECC, O_POINT_INF
 
 class TestECC():
 

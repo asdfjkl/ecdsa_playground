@@ -1,4 +1,4 @@
-from .curve_projective import Point, ProPoint, ProECC, O_POINT_INF
+from curve_projective import Point, ProPoint, ProECC, O_POINT_INF
 
 class TestECCProjective():
 
